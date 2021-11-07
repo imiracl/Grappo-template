@@ -1,0 +1,88 @@
+// USER VARIABLES SECTION
+$accent: #3671E9; // Accent Color
+$fontsize: 16px; // Body Font Size
+$textcolor: #fff; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: roboto-oh5, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$grey-5:#E0E0E0;
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' ;// Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' ;//; Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; //; Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl){	
+	@font-face{
+	font-family: $fname;
+	font-style: $fstyle;
+	font-weight: $fweight;
+	src: url($furl) format('woff2');
+}
+}
+
+//Примерно, так как у каждого шрифта свои значения...
+// 100 – Thin || Hairline
+// 200 – Extra Light || Ultra Light || Thin
+// 300 – Light
+// 400 – Normal || Regular
+// 500 – Medium
+// 600 – Semi Bold || Demi Bold
+// 700 – Bold
+// 800 – Extra Bold || Ultra Bold || Heavy
+// 900 – Black || Heavy
+
+
+@include font('Rubik-Regular', normal, 400, '../fonts/Rubik-Regular.ttf');
+@include font('Rubik-Medium', medium, 500, '../fonts/Rubik-Medium.ttf');
+@include font('Rubik-Bold', bold, 600, '../fonts/Rubik-Bold.ttf');
+
+
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder{
+	
+	color: #666;
+}
+
+::selection{
+	
+	background-color: $accent;
+	color: #fff;
+}
+
+input, textarea
+{	
+	outline: none;
+	&:focus:required:invalid
+	{
+		border-color: red;
+	}
+		
+	&:required:valid{
+		border-color: green;
+	}
+		
+
+}
+
+
+body{
+	font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
