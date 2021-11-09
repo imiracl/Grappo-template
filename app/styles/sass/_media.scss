@@ -3,7 +3,6 @@
 /*==========  Desktop First  ==========*/
 // ≥1400px
 @include media-breakpoint-down(xxl) {
-
 }
 
 // ≥1200px
@@ -12,12 +11,12 @@
 
 // ≥992px
 @include media-breakpoint-down(lg) {
-	.header{
-		margin-top: 0px;
-		padding-top: 30px;
-	}
+  .header {
+    margin-top: 0px;
+    padding-top: 30px;
+  }
   .nav {
-		padding-top: 50px;
+    padding-top: 50px;
     display: block;
     position: absolute;
     top: 0px;
@@ -45,7 +44,7 @@
     &.open-menu {
       left: 0 !important;
     }
-		
+
     overflow: auto;
   }
   .menu-burger__header {
@@ -54,7 +53,7 @@
     height: 35px;
     display: block;
     margin-left: 10px;
-		right: 0;
+    right: 0;
     span {
       height: 3px;
       width: 100%;
@@ -101,17 +100,159 @@
     }
   }
 
-	.login_log {
-	border: none;
-	}
+  .login_log {
+    border: none;
+  }
+  .top-head__link {
+    margin-bottom: 100px;
+  }
+  .calc-section {
+    margin-top: 90px;
+  }
+  .card {
+    h2 {
+      padding-top: 40px;
+    }
+  }
+  .calc-form_bg_1,
+  .calc-form_bg_2 {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .calc-form__input {
+    flex-wrap: wrap;
+  }
+  .calc-form__input {
+    button {
+      margin-top: 20px;
+    }
+    input {
+      margin-top: 20px;
+      margin-right: 40px;
+    }
+    select {
+      margin-top: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  .subscribe__wrapper{
+    flex-direction: column;
+    
+  }
+  .subscribe_input{
+    margin-top: 15px;
+  }
+  .footer{
+    margin-top: 90px;
+  }
 }
 
 // ≥768px
 @include media-breakpoint-down(md) {
+  .top-head {
+    margin-top: 40px;
+  }
+  .top-head_wrapper {
+    h1 {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  .top-head__link {
+    margin-bottom: 50px;
+  }
+  .stats__value_text {
+    h3 {
+      font-size: 30px;
+    }
+  }
+  .stats {
+    flex-wrap: wrap;
+
+    &__value {
+      margin-top: 30px;
+    }
+  }
+  .calc-section {
+    margin-top: 90px;
+  }
+  .card {
+    h2 {
+      padding-top: 40px;
+      font-size: 30px;
+      line-height: 1.45;
+    }
+  }
+  .card_wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card_cards {
+    margin-top: 15px;
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
+  }
+  .subscribe__wrapper{
+    flex-wrap: wrap;
+  }
 }
 
 // ≥576px
 @include media-breakpoint-down(sm) {
+  .top-head_wrapper {
+    h1 {
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+  .top-head__save_wrapper {
+    p {
+      font-size: 14px;
+    }
+  }
+  .top-head__link {
+    margin-bottom: 15px;
+  }
+  .stats__value_text {
+    h3 {
+      font-size: 25px;
+    }
+  }
+  .card {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+  .card-section {
+    padding-bottom: 40px;
+  }
+  
+  .subscribe_input{
+    flex-wrap: wrap;
+    button{
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  .subscribe_title{
+    h2{
+      font-size: 24px;
+      line-height: 1.24;
+    }
+  }
+  .footer-social{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer{
+    margin-top: 30px;
+  }
+  .footer-section{
+    padding-top: 30px;
+  }
 }
 
 // ≥0px
@@ -125,6 +266,9 @@
 
 // ≤576px
 @include media-breakpoint-up(sm) {
+  .container {
+    max-width: none;
+  }
 }
 
 // ≤768px
@@ -137,7 +281,7 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
-	.container {
-		max-width: 1230px;
-	}
+  .container {
+    max-width: 1230px;
+  }
 }

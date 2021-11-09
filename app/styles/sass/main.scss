@@ -2,12 +2,16 @@
 .fixed-page {
   overflow: hidden; /*запрещаем прокручивание страницы при открытом меню*/
 }
+button {
+  &:active {
+    transform: scale(0.95);
+  }
+}
 body {
   background-color: #0d0d2b;
   color: $textcolor;
   font-family: "Rubik-Regular", sans-serif;
   letter-spacing: 0.01em;
-  min-height: 4000px;
 }
 ul {
   list-style: none;
@@ -70,7 +74,7 @@ a {
 
 //***************TOP-HEAD***************\\
 .top-head {
-  background-image: url("../../images/src/Illustration.jpg");
+  background-image: url("../images/src/Illustration.jpg");
   background-repeat: no-repeat;
   background-position: bottom 157px right 15px;
 
@@ -191,6 +195,7 @@ a {
     justify-content: space-between;
     align-items: center;
     input {
+      background-color: #fbfcfe;
       font-size: 20px;
       line-height: 150%;
       border: none;
@@ -202,6 +207,7 @@ a {
       }
     }
     select {
+      background-color: #fbfcfe;
       margin: 0px 48px;
       padding: 6px 0px;
       line-height: 150%;
@@ -209,7 +215,7 @@ a {
       border: none;
       border-bottom: solid #e0e0e0 1px;
       min-width: 200px;
-      background-image: url("../../images/dist/svg/Arrow_Down.svg");
+      background-image: url("../images/dist/svg/Arrow_Down.svg");
       background-repeat: no-repeat;
       background-position: bottom 6px right 0px;
       appearance: none;
@@ -224,6 +230,11 @@ a {
       color: #fff;
       padding: 16px 34px;
       font-size: 18px;
+      transition: 0.2s ease background-color !important;
+      &:hover {
+        color: inherit;
+        background-color: #2b076e;
+      }
     }
   }
   &_estimated {
@@ -281,19 +292,21 @@ a {
 }
 .card {
   h2 {
+    margin: 0 auto;
     font-family: Rubik-Bold;
     font-size: 40px;
     line-height: 150%;
-    text-align: center;
     color: #0d0d2b;
     padding-top: 97px;
     margin-bottom: 65px;
+    max-width: 720px;
+    text-align: center;
   }
 }
 .card_wrapper {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
 }
 .ard-section {
   background-color: #f9fafd;
@@ -316,12 +329,16 @@ a {
   border-radius: 50%;
   border: 2px solid rgba(43, 7, 110, 0.2);
   box-sizing: border-box;
-  background-image: url("../../images/src/svg/right-arrow.svg");
+  background-image: url("../images/src/svg/right-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .card_cards {
   display: flex;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 .cards-cards {
   padding: 47px 0px;
@@ -435,12 +452,36 @@ a {
     border-radius: 32px;
     padding: 14px 32px;
     outline: none;
+    transition: 0.2s ease background-color !important;
+    &:hover {
+      color: inherit;
+      background-color: #2b076e;
+    }
   }
   margin-top: -33px;
 }
-.footer-section{
+.footer-section {
   padding-top: 87px;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyright {
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+.footer__social {
+  a {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+}
+.footer {
+  margin-top: 173px;
+  margin-bottom: 50px;
+}
 //***************END footer-section**************\\
 @import "media";
